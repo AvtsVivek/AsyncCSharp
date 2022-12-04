@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model System.Collections.Generic.IEnumerable<StockPrice>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>Stock prices for @ViewBag.Title</h2>
+
+<p>
+    <strong>Data provided for free by <a href="https://iextrading.com/developer/">IEX</a>. View <a href="https://iextrading.com/api-exhibit-a/">IEX’s Terms of Use.</a></strong>
+</p>
+
+<table width="100%">
+    <thead>
+        <tr>
+            <th>Identifier</th>
+            <th>Volume</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var stockPrice in Model)
+        {
+            <tr>
+                <td>
+                    @stockPrice.Identifier
+                </td>
+                <td>
+                    @stockPrice.Volume
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

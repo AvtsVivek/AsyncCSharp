@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "JQuery Tests";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Some Jquery Tests.</p>
+
+<div class="text-body">
+    <button id="my_primary_button" type="button" class="btn btn-primary">Tests</button>
+
+    <form id="myForm">
+  <label for="form-x-name">Name (required, at least 5 characters)</label>
+  <input id="form-x-name" type="text" name="name" minlength="5" 
+  class="form-control" data-msg-required="Name is required." 
+  data-rule-required="true">
+  <input type="submit" value="Submit">
+</form>
+
+</div>
+
+<div id="jqueryTestDiv"></div>
+
+<div class="validation-summary-valid" data-valmsg-summary="true">
+    <ul><li style="display:none"></li></ul>
+</div>
+
+
+@section Scripts
+{
+ <script>
+            $("#my_primary_button").click(function() {
+            alert("Handler for .click() called.");
+        });
+
+      jQuery(document).ready(function () {
+          alert("document is ready. jQuery is also Working!!!");
+      });
+
+      $(window).ready(function () {
+          alert("window is ready. $ is also Working!!!");
+      });
+
+      @* $("#myform").validate({
+            submitHandler: function(form) {
+              alert("This is a valid form!");
+            }
+      }); *@
+ </script>
+} 
