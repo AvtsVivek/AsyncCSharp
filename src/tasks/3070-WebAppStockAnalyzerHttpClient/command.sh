@@ -245,5 +245,14 @@ dotnet run --project $ProjectFileNameCurrentPath
 
 ############################################################################################
 
+
+Set-Location ClientApp
+
+npm install
+
+npm run wpbuild
+
+Set-Location ..
+
 # If you are cloding and just want to run the app after cloning, run the following command.
 dotnet run --project WebAppStockAnalyzerHttpClient.csproj
