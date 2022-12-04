@@ -244,3 +244,6 @@ dotnet run --project $ProjectFileNameCurrentPath
 # Now stop the app, add index cshtml page and also the action method. now run the app again.
 
 ############################################################################################
+
+# If you are cloding and just want to run the app after cloning, run the following command.
+dotnet run --project WebAppStockAnalyzerHttpClient.csproj
